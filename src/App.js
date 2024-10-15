@@ -25,7 +25,7 @@ const App = () => {
         <ul className="nav-list">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/spa">Spa</Link></li>
-          <li><Link to="/swim">Swim</Link></li>
+          <li><Link to="/swimspas">Swim Spas</Link></li>
           <li><Link to="/gazebo">Gazebo</Link></li> {/* Add Gazebo to the nav */}
         </ul>
       </nav>
@@ -33,7 +33,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/spa" element={<Spa />} />
-        <Route path="/swim" element={<Swim />} />
+        <Route path="/swimspas" element={<Swim />} />
         <Route path="/gazebo" element={<Gazebo />} /> {/* Add Gazebo route */}
       </Routes>
     </Router>
