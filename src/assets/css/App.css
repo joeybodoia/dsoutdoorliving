@@ -134,13 +134,13 @@
 
 /* Background Images */
 .spa-box {
-  background-image: url('https://imgur.com/a/10wdvbn');
+  background-image: url('../images/hot_tub.jpg');
 }
 
 .swim-box {
-  background-image: url('https://imgur.com/a/10wdvbn');
+  background-image: url('../images/swim_spa.jpg');
 }
 
 .gazebo-box {
-  background-image: url('https://imgur.com/a/x9nYchU');
+  background-image: url('../images/gazebo.jpg');
 }

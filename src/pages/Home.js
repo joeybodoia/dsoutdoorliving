@@ -13,7 +13,7 @@ const Home = () => {
             <h2>Spa</h2>
           </div>
         </Link>
-        <Link to="/swim" className="box-link swim-box">
+        <Link to="/swimspas" className="box-link swim-box">
           <div className="box-overlay">
             <h2>Swim Spa</h2>
           </div>

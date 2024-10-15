@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import Spa from './pages/Spa';
 import Swim from './pages/Swim';
 import Gazebo from './pages/Gazebo';  // Import the new Gazebo page
-import './App.css'; // Import your CSS file
+import './assets/css/App.css';
+//import './App.css'; // Import your CSS file
 
 const App = () => {
   return (
@@ -24,9 +25,9 @@ const App = () => {
       <nav className="navbar">
         <ul className="nav-list">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/spa">Spa</Link></li>
+          <li><Link to="/spa">Spas</Link></li>
           <li><Link to="/swimspas">Swim Spas</Link></li>
-          <li><Link to="/gazebo">Gazebo</Link></li> {/* Add Gazebo to the nav */}
+          <li><Link to="/gazebo">Gazebos</Link></li> {/* Add Gazebo to the nav */}
         </ul>
       </nav>
 
