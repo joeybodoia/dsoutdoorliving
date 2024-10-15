@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
+/* Existing styles... */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Styles for the new top navigation bar */
+.top-navbar {
+  background-color: #444;
   color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.top-navbar-left {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-navbar-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
 }
+
+.top-navbar-right a:hover {
+  background-color: #555;
+}
+
+/* Styles for the existing nav bar */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.nav-list li a:hover {
+  background-color: #555;
+}
+
+/* Styles for Home page sections */
+.home-container {
+  padding: 20px;
+}
+
+.our-story, .contact-us {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.our-story h2, .contact-us h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.our-story p, .contact-us p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
