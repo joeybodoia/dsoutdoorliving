@@ -144,3 +144,80 @@
 .gazebo-box {
   background-image: url('../images/gazebo.jpg');
 }
+
+
+.spa-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.spa-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.spa-images img {
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.spa-description,
+.spa-features,
+.spa-specifications,
+.spa-accessories {
+  margin-top: 20px;
+}
+
+.spa-features img,
+.spa-accessories img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.spa-container {
+  padding: 20px;
+}
+
+.spa-list {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  gap: 20px; /* Space between items */
+}
+
+.spa-item {
+  display: flex; /* Use flexbox for aligning content within each item */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center content */
+  width: 200px; /* Fixed width for each product container */
+  cursor: pointer; /* Change cursor on hover */
+  border: 1px solid #ccc; /* Optional: border around each product */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 10px; /* Padding inside the item */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for depth */
+}
+
+.spa-image {
+  width: 100%; /* Make the image take the full width of the container */
+  height: 150px; /* Fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 4px; /* Optional: rounded corners for the image */
+}
+
+

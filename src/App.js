@@ -4,8 +4,9 @@ import Home from './pages/Home';
 import Spa from './pages/Spa';
 import Swim from './pages/Swim';
 import Gazebo from './pages/Gazebo';  // Import the new Gazebo page
+import SpaDetail from './pages/SpaDetail'; // Import SpaDetail
 import './assets/css/App.css';
-//import './App.css'; // Import your CSS file
+// import './App.css'; // Import your CSS file
 
 const App = () => {
   return (
@@ -36,10 +37,13 @@ const App = () => {
         <Route path="/spa" element={<Spa />} />
         <Route path="/swimspas" element={<Swim />} />
         <Route path="/gazebo" element={<Gazebo />} /> {/* Add Gazebo route */}
+        <Route path="/spa/:productName" element={<SpaDetail />} /> {/* Add SpaDetail route */}
       </Routes>
     </Router>
   );  
 };
 
 export default App;
+
+
 
