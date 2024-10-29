@@ -195,10 +195,16 @@ ul {
   padding: 20px;
 }
 
+.spa-container h1 {
+  font-size: 2.5rem; /* Adjust the size as needed */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
 .spa-list {
   display: flex; /* Use flexbox for horizontal layout */
-  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-  gap: 20px; /* Space between items */
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .spa-item {
@@ -213,6 +219,36 @@ ul {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for depth */
 }
 
+.spa-item .bottom-container {
+  display: flex; /* Use flexbox for the bottom container */
+  justify-content: space-between; /* Space between left and right items */
+  width: 100%; /* Full width */
+  padding-top: 10px; /* Add padding to separate from above content */
+}
+
+.spa-item p {
+  margin: 0; /* Reset margin for p tags */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+.spa-item .left-text {
+  text-align: left; /* Align text to the left */
+  flex: 1; /* Allow it to take available space */
+}
+
+.spa-item .right-text {
+  text-align: right; /* Align text to the right */
+  flex: 1; /* Allow it to take available space */
+}
+
+.spa-item i {
+  margin-right: 5px; /* Space between icon and text */
+  color: #007bff; /* Change color of icons as needed */
+}
+
+
+
+
 .spa-image {
   width: 100%; /* Make the image take the full width of the container */
   height: 150px; /* Fixed height for all images */
@@ -220,4 +256,164 @@ ul {
   border-radius: 4px; /* Optional: rounded corners for the image */
 }
 
+.spa-detail {
+  padding: 20px;
+}
+
+.spa-description-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  margin-bottom: 20px; /* Space below the description section */
+}
+
+.image-container {
+  flex: 1; /* Take up equal space */
+  margin-right: 20px; /* Space between image and description */
+}
+
+.image-carousel {
+  display: flex;
+  align-items: center; /* Center the buttons and image */
+}
+
+.image-carousel-container {
+  border: 1px solid #ccc; /* Same border as feature items */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 10px; /* Padding inside the carousel container */
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+}
+
+.carousel-image {
+  width: 600px; /* Adjust width for larger images */
+  height: 600px; /* Adjust height for larger images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 4px; /* Optional: rounded corners for carousel images */
+}
+
+.image-carousel button {
+  background-color: #007bff; /* Blue background for arrows */
+  border: none; /* Remove default border */
+  color: white; /* White text */
+  font-size: 12px; /* Font size for the arrow */
+  padding: 4px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 4px; /* Optional: rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.image-carousel button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+.description-container {
+  flex: 2; /* Take up more space */
+}
+
+.features-container {
+  display: flex; /* Use flexbox for feature items */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  gap: 20px; /* Space between features */
+}
+
+.feature-item {
+  border: 1px solid #ccc; /* Optional: border around each feature */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 10px; /* Padding inside the item */
+  flex: 1; /* Allow items to grow equally */
+  min-width: 200px; /* Minimum width for each feature */
+  text-align: center; /* Center text in feature items */
+}
+
+.feature-item img {
+  max-width: 100%; /* Ensure the image fits within the feature item */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Optional: rounded corners for feature images */
+}
+
+.specifications-container {
+  margin-top: 20px; /* Space above specifications */
+}
+
+.specification-button {
+  background-color: #007bff; /* Blue background for buttons */
+  border: none; /* Remove default border */
+  color: white; /* White text */
+  font-size: 16px; /* Font size for button */
+  padding: 10px; /* Padding for the button */
+  width: 100%; /* Full width button */
+  text-align: left; /* Align text to the left */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 4px; /* Optional: rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth background transition */
+  margin-bottom: 5px; /* Space between buttons */
+}
+
+.specification-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.specification-details {
+  padding: 10px; /* Padding inside the details */
+  border: 1px solid #ccc; /* Border around the details */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 5px; /* Space above details */
+}
+
+.accessories-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; /* Space items evenly */
+  margin-top: 20px; /* Space above accessories section */
+}
+
+.accessory-item {
+  border: 1px solid #ccc; /* Border around each accessory */
+  border-radius: 8px; /* Optional: rounded corners */
+  width: 400px; /* Fixed width for each accessory */
+  height: 500px; /* Fixed height for each accessory */
+  margin-bottom: 20px; /* Space between accessories */
+  position: relative; /* Relative positioning for child elements */
+  overflow: hidden; /* Hide overflow */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.accessory-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; /* Ensure full height */
+  justify-content: center; /* Center content vertically */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.accessory-image {
+  max-width: 100%; /* Ensure the image fits within the accessory item */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Optional: rounded corners for accessory images */
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.accessory-description {
+  display: none; /* Initially hidden */
+  position: absolute; /* Position absolutely to overlap image */
+  top: 5; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  color: black; /* Text color */
+  padding: 20px; /* Padding around description */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+
+.accessory-item:hover .accessory-description {
+  display: block; /* Show description on hover */
+}
+
+.accessory-item:hover .accessory-image {
+  opacity: 0.3; /* Reduce image opacity on hover */
+}
 
