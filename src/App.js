@@ -5,6 +5,7 @@ import Spa from './pages/Spa';
 import Swim from './pages/Swim';
 import Gazebo from './pages/Gazebo';  // Import the new Gazebo page
 import SpaDetail from './pages/SpaDetail'; // Import SpaDetail
+import SwimDetail from './pages/SwimDetail';
 import './assets/css/App.css';
 // import './App.css'; // Import your CSS file
 
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/spa" element={<Spa />} />
         <Route path="/swimspas" element={<Swim />} />
+        <Route path="/swimspas/:productName" element={<SwimDetail />} />
         <Route path="/gazebo" element={<Gazebo />} /> {/* Add Gazebo route */}
         <Route path="/spa/:productName" element={<SpaDetail />} /> {/* Add SpaDetail route */}
       </Routes>
