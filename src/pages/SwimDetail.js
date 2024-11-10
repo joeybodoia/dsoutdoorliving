@@ -56,7 +56,6 @@ const SwimDetail = () => {
 
   return (
     <div className="spa-detail">
-      <h1>{swim.PRODUCT_NAME}</h1>
       <div className="spa-description-container">
         <div className="image-container">
           <div className="image-carousel-container">
@@ -72,6 +71,7 @@ const SwimDetail = () => {
           </div>
         </div>
         <div className="description-container">
+          <h1>{swim.PRODUCT_NAME}</h1>
           <h3>Description</h3>
           <p>{swim.PRODUCT_DESCRIPTION.Description}</p>
           <p>Seats: {swim.PRODUCT_DESCRIPTION['Number of Seats']}</p>
