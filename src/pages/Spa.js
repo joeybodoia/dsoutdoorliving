@@ -3,12 +3,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
 
+console.log('API Base URL:', process.env.REACT_APP_API_BASE_URL);
+
 const Spa = () => {
   const [spaProducts, setSpaProducts] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/spas`)
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/spas/`)
       .then((response) => {
         setSpaProducts(response.data);
       })  
