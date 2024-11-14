@@ -12,7 +12,7 @@ const SwimDetail = () => {
 
   useEffect(() => {
     // Fetch the specific swim spa data using the product name
-    axios.get(`http://localhost:3001/api/swimspas/${productName}`)
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/swimspas/${productName}`)
       .then((response) => {
         setSwim(response.data);
       })

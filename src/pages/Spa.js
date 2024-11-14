@@ -8,7 +8,7 @@ const Spa = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/spas')
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/spas`)
       .then((response) => {
         setSpaProducts(response.data);
       })  

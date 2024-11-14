@@ -12,7 +12,7 @@ const SpaDetail = () => {
 
   useEffect(() => {
     // Fetch the specific spa product data using the product name
-    axios.get(`http://localhost:3001/api/spas/${productName}`)
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/spas/${productName}`)
       .then((response) => {
         setSpa(response.data);
       })

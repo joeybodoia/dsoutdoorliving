@@ -12,7 +12,7 @@ const GazeboDetail = () => {
 
   useEffect(() => {
     // Fetch the specific gazebo data using the product name
-    axios.get(`http://localhost:3001/api/gazebos/${productName}`)
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/gazebos/${productName}`)
       .then((response) => {
         setGazebo(response.data);
       })
