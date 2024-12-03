@@ -2,14 +2,17 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+
+console.log('Server.js is starting up...');
+
 // Middleware to redirect root domain to www
 app.use((req, res, next) => {
   const host = req.headers.host;
   const isHttps = req.headers['x-forwarded-proto'] === 'https';
-  console.log('req headers host = ', req.headers.host)
-  console.log(' is it https? ', req.headers['x-forwarded-proto'])
-  console.log('host = ', host)
-  console.log('is https ', isHttps)
+  console.log('req headers host = ', req.headers.host);
+  console.log(' is it https? ', req.headers['x-forwarded-proto']);
+  console.log('host = ', host);
+  console.log('is https ', isHttps);
   // Redirect root domain to www
   if (host === 'ds-outdoorliving.com') {
     return res.redirect(301, `https://www.ds-outdoorliving.com${req.url}`);
