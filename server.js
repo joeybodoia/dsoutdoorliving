@@ -6,7 +6,10 @@ const app = express();
 app.use((req, res, next) => {
   const host = req.headers.host;
   const isHttps = req.headers['x-forwarded-proto'] === 'https';
-
+  console.log('req headers host = ', req.headers.host)
+  console.log(' is it https? ', req.headers['x-forwarded-proto'])
+  console.log('host = ', host)
+  console.log('is https ', isHttps)
   // Redirect root domain to www
   if (host === 'ds-outdoorliving.com') {
     return res.redirect(301, `https://www.ds-outdoorliving.com${req.url}`);
