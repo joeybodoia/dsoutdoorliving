@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="home-container">
-      <h1>Home Page</h1>
+      <h1>D's Outdoor Living</h1>
 
       {/* Box Links Section */}
       <div className="box-links">
