@@ -708,6 +708,7 @@ ul {
     text-decoration: none; /* Remove underline */
     color: white; /* White text */
     font-size: 0.9rem; /* Adjust font size */
+    padding: 8px 5px;
   }
 
   /* Hero Text Adjustments */
@@ -757,12 +758,13 @@ ul {
   gap: 0px; /* Reduce the gap between buttons */
 }
 
+
   .nav-list li a {
     white-space: nowrap; /* Prevent "Swim Spas" from splitting */
     text-decoration: none; /* Remove underline */
     color: white; /* White text */
-    font-size: 0.9rem; /* Adjust font size */
+    font-size: 0.7rem; /* Adjust font size */
+    padding: 8px 2px;
   }
 }
-
 
