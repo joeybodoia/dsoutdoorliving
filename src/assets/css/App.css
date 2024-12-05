@@ -1,10 +1,26 @@
 /* Existing styles... */
 
-/* Styles for the new top navigation bar */
+
+/* Set the background for the entire app */
+body {
+  background-color: #2c2c2c; /* Dark grey */
+  color: white; /* White text for better contrast */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Optional: Set a global font */
+}
+
+/* Ensure root div takes up full height */
+#root {
+  min-height: 100vh; /* Ensure it spans the entire viewport height */
+  display: flex; /* Optional: Allows flexbox layouts within the app */
+  flex-direction: column; /* Stack child elements vertically */
+}
+
+
 /* Top Navbar */
 /* Top Navbar */
 .top-navbar {
-  background-color: #000000; /* Black background for the top navbar */
+  background-color: #2c2c2c; /* Same dark grey as the app background */
   color: white; /* White text for contrast */
   padding: 10px;
   display: flex;
@@ -26,8 +42,9 @@
 }
 
 .top-navbar-right a:hover {
-  background-color: #333333; /* Slightly lighter black on hover */
+  background-color: #444444; /* Slightly lighter grey on hover */
 }
+
 
 /* Main Navbar */
 .navbar {
@@ -64,21 +81,31 @@
   padding: 20px;
 }
 
-.our-story, .contact-us {
-  background-color: #f9f9f9;
+/* Our Story and Contact Us Sections */
+.our-story,
+.contact-us {
+  background-color: #2a635f; /* Teal/green background */
+  color: white; /* White text for contrast */
   padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
+  border-radius: 12px; /* Rounded corners for a polished look */
+  margin: 20px 0; /* Space above and below the sections */
+  font-family: Arial, sans-serif; /* Match font with the hero banner */
 }
 
-.our-story h2, .contact-us h2 {
-  font-size: 24px;
+/* Headings */
+.our-story h2,
+.contact-us h2 {
+  font-size: 2rem; /* Adjust heading size */
   margin-bottom: 15px;
+  color: white; /* Ensure heading text is readable */
 }
 
-.our-story p, .contact-us p {
-  font-size: 16px;
-  line-height: 1.6;
+/* Paragraphs */
+.our-story p,
+.contact-us p {
+  font-size: 1.2rem; /* Adjust paragraph text size */
+  line-height: 1.6; /* Increase line spacing for readability */
+  color: white; /* Ensure text contrast */
 }
 
 .gazebo-container {
@@ -175,8 +202,11 @@
 }
 
 .hero-text p {
-  font-size: 1.8rem; /* Larger subheadline font */
-  margin-bottom: 30px; /* Space below the paragraph */
+  font-size: 2rem; /* Larger font */
+  margin-bottom: 30px;
+  color: #2EE6D6; /* Teal color */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .hero-button {
@@ -234,11 +264,50 @@
   gap: 40px;
 }
 
+/* Product Containers (Spa, Swim Spas, Gazebos) */
 .spa-item {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
+  background-color: #2a635f; /* Teal/green background color */
+  color: white; /* White text for contrast */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Add padding inside the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  cursor: pointer; /* Indicate clickability */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+  overflow: hidden; /* Ensure no overflow from child elements */
+  text-overflow: ellipsis; /* Handle long text gracefully */
+  word-wrap: break-word; /* Break long words to fit within the container */
 }
+
+/* Hover Effects for Product Containers */
+.spa-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+/* Text Inside Containers */
+.spa-item h2 {
+  font-size: 1.5rem; /* Larger font for product names */
+  margin-bottom: 10px; /* Space below the product name */
+}
+
+.spa-item p {
+  font-size: 1.2rem; /* Adjust font size */
+  line-height: 1.5; /* Improve readability */
+  margin: 5px 0; /* Space between paragraphs */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Force long words to break */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Images Inside Containers */
+.spa-image {
+  width: 100%; /* Make the image fill the container width */
+  height: 150px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure images fit nicely */
+  border-radius: 8px; /* Match container rounding */
+  margin-bottom: 15px; /* Space below the image */
+}
+
 
 .spa-images img {
   width: 150px;
