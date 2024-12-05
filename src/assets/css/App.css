@@ -561,4 +561,103 @@ ul {
   opacity: 0.3; /* Reduce image opacity on hover */
 }
 
+/* General Responsive Rules */
+@media (max-width: 768px) {
+  /* Hero Banner */
+  .hero-banner {
+    flex-direction: column; /* Stack text and logo vertically */
+    align-items: center;
+    height: auto; /* Allow height to adjust dynamically */
+    padding: 20px; /* Adjust padding */
+  }
+
+  .hero-text {
+    max-width: 100%; /* Allow full width */
+    text-align: center; /* Center-align text */
+  }
+
+  .logo-container {
+    width: 250px; /* Reduce logo size */
+    height: 300px;
+    margin-top: 20px; /* Add space between text and logo */
+  }
+
+  /* Navbars */
+  .top-navbar, .navbar {
+    flex-direction: column; /* Stack navbar items */
+    align-items: center;
+    padding: 10px 0; /* Reduce padding */
+  }
+
+  .nav-list {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;
+    gap: 10px; /* Add space between items */
+  }
+
+  .nav-list li {
+    margin: 0; /* Remove right margin */
+  }
+
+  /* Product Containers */
+  .spa-list {
+    flex-direction: column; /* Stack products vertically */
+    gap: 20px; /* Add spacing between products */
+  }
+
+  .spa-item {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px; /* Optional: limit max width */
+    margin: 0 auto; /* Center the container */
+  }
+
+  /* Our Story and Contact Us Sections */
+  .our-story, .contact-us {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .our-story h2, .contact-us h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .our-story p, .contact-us p {
+    font-size: 1rem; /* Adjust paragraph text size */
+  }
+
+  /* Accessories Containers */
+  .accessories-container {
+    flex-direction: column; /* Stack accessories vertically */
+    align-items: center;
+  }
+
+  .accessory-item {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 400px; /* Optional: limit max width */
+  }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 3rem; /* Reduce headline size */
+  }
+
+  .hero-text p {
+    font-size: 1.5rem; /* Reduce subheadline size */
+  }
+
+  .hero-button {
+    font-size: 1rem; /* Adjust button text size */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  .logo-container {
+    width: 200px; /* Further reduce logo size */
+    height: 250px;
+  }
+
+  .spa-item {
+    padding: 10px; /* Reduce padding */
+  }
+}
 
