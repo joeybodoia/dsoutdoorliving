@@ -561,8 +561,15 @@ ul {
   opacity: 0.3; /* Reduce image opacity on hover */
 }
 
-/* General Responsive Rules */
+/* General Responsive Rules for Mobile */
 @media (max-width: 768px) {
+  /* Prevent Horizontal Scrolling */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Fix extra space issue */
+  }
+
   /* Hero Banner */
   .hero-banner {
     flex-direction: column; /* Stack text and logo vertically */
@@ -582,67 +589,80 @@ ul {
     margin-top: 20px; /* Add space between text and logo */
   }
 
-  /* Navbars */
-  .top-navbar{
-    flex-direction: column; /* Stack navbar items */
+  /* Top Navbar */
+  .top-navbar {
+    flex-direction: column; /* Stack navbar items vertically */
     align-items: center;
     padding: 10px 0; /* Reduce padding */
   }
 
-/* Main Navbar */
-.navbar {
-  display: flex;
-  justify-content: center; /* Center the navigation bar */
-  background-color: #2a635f; /* Teal background */
-  padding: 10px;
-}
-
-.nav-list {
-  display: flex; /* Use flexbox for horizontal layout */
-  flex-wrap: nowrap; /* Prevent items from wrapping */
-  gap: 10px; /* Add spacing between items */
-  list-style: none; /* Remove bullets */
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list li {
-  padding: 5px 10px; /* Adjust padding for smaller screens */
-  font-size: 1rem; /* Adjust font size */
-}
-
-.nav-list li a {
-  text-decoration: none; /* Remove underline */
-  color: white; /* White text */
-}
-
-.nav-list li a:hover {
-  text-decoration: underline; /* Add underline on hover */
-}
-
-
-  /* Product Containers */
-  .spa-list {
-    flex-direction: column; /* Stack products vertically */
-    gap: 20px; /* Add spacing between products */
+  /* Main Navbar */
+  .navbar {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center; /* Center-align the navigation bar */
+    background-color: #2a635f; /* Teal background */
+    padding: 10px 0; /* Adjust vertical padding */
   }
 
-  .spa-item {
-    width: 100%; /* Full width on smaller screens */
-    max-width: 400px; /* Optional: limit max width */
-    margin: 0 auto; /* Center the container */
+  .nav-list {
+    display: flex; /* Horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 10px; /* Add spacing between items */
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li {
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .nav-list li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+  }
+
+  .nav-list li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+
+  /* Product Containers */
+  .box-links {
+    flex-direction: column; /* Stack containers vertically */
+    align-items: center; /* Center-align the stacked items */
+    width: 100%; /* Full width */
+    gap: 15px; /* Adjust spacing */
+  }
+
+  .box-link {
+    width: 100%; /* Full width for mobile */
+    height: 150px; /* Adjust height for mobile */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Space between items */
+    transition: transform 0.3s ease; /* Smooth hover effects */
+  }
+
+  .box-link:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
   }
 
   /* Our Story and Contact Us Sections */
-  .our-story, .contact-us {
+  .our-story,
+  .contact-us {
     padding: 15px; /* Reduce padding */
   }
 
-  .our-story h2, .contact-us h2 {
+  .our-story h2,
+  .contact-us h2 {
     font-size: 1.5rem; /* Adjust heading size */
   }
 
-  .our-story p, .contact-us p {
+  .our-story p,
+  .contact-us p {
     font-size: 1rem; /* Adjust paragraph text size */
   }
 
@@ -650,27 +670,18 @@ ul {
   .accessories-container {
     flex-direction: column; /* Stack accessories vertically */
     align-items: center;
+    gap: 20px; /* Add spacing between items */
   }
 
   .accessory-item {
     width: 100%; /* Full width for smaller screens */
     max-width: 400px; /* Optional: limit max width */
   }
-
-  .box-links {
-    flex-direction: column; /* Stack containers vertically */
-    align-items: center; /* Center-align the stacked items */
-    gap: 15px; /* Adjust spacing */
-  }
-
-  .box-link {
-    max-width: 100%; /* Full width on mobile */
-    height: 150px; /* Adjust height for mobile */
-  }
 }
 
 /* Extra Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
+  /* Hero Text Adjustments */
   .hero-text h1 {
     font-size: 3rem; /* Reduce headline size */
   }
@@ -686,53 +697,12 @@ ul {
 
   .logo-container {
     width: 200px; /* Further reduce logo size */
-    height: 250px;
+    height: 250px; /* Adjust height */
   }
 
-  .spa-item {
-    padding: 10px; /* Reduce padding */
-  }
- 
-   .box-links {
-    flex-direction: column; /* Stack containers vertically */
-    align-items: center; /* Center-align the stacked items */
-    gap: 15px; /* Adjust spacing */
-  }
-
+  /* Product Containers */
   .box-link {
-    max-width: 100%; /* Full width on mobile */
-    height: 150px; /* Adjust height for mobile */
+    height: 140px; /* Further reduce container height */
   }
-
-/* Main Navbar */
-.navbar {
-  display: flex;
-  justify-content: center; /* Center the navigation bar */
-  background-color: #2a635f; /* Teal background */
-  padding: 10px;
-}
-
-.nav-list {
-  display: flex; /* Use flexbox for horizontal layout */
-  flex-wrap: nowrap; /* Prevent items from wrapping */
-  gap: 10px; /* Add spacing between items */
-  list-style: none; /* Remove bullets */
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list li {
-  padding: 5px 10px; /* Adjust padding for smaller screens */
-  font-size: 1rem; /* Adjust font size */
-}
-
-.nav-list li a {
-  text-decoration: none; /* Remove underline */
-  color: white; /* White text */
-}
-
-.nav-list li a:hover {
-  text-decoration: underline; /* Add underline on hover */
-}
 }
 
