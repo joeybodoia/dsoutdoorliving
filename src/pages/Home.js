@@ -42,9 +42,9 @@ const Home = () => {
       {/* Contact Us Section */}
       <section id="contact-us" className="contact-us">
         <h2>Contact Us</h2>
-        <p><strong>Phone:</strong> (555) 123-4567</p>
-        <p><strong>Email:</strong> contact@outdoorleisure.com</p>
-        <p><strong>Address:</strong> 1234 Leisure Lane, Relaxation City, RL 12345</p>
+        <p><strong>Phone:</strong> (480) 716-4277</p>
+        <p><strong>Email:</strong> service@ds-outdoorliving.com, cj@ds-outdoorliving.com</p>
+        <p><strong>Address:</strong> 3106 W Blue Eagle Lane Phoenix AZ 85086</p>
       </section>
     </div>
   );
