@@ -1,9 +1,11 @@
 /* Existing styles... */
 
 /* Styles for the new top navigation bar */
+/* Top Navbar */
+/* Top Navbar */
 .top-navbar {
-  background-color: #444;
-  color: white;
+  background-color: #000000; /* Black background for the top navbar */
+  color: white; /* White text for contrast */
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -24,12 +26,12 @@
 }
 
 .top-navbar-right a:hover {
-  background-color: #555;
+  background-color: #333333; /* Slightly lighter black on hover */
 }
 
-/* Styles for the existing nav bar */
+/* Main Navbar */
 .navbar {
-  background-color: #333;
+  background-color: #2a635f; /* Teal/green background for the main navbar */
   padding: 10px;
 }
 
@@ -45,15 +47,17 @@
 }
 
 .nav-list li a {
-  color: white;
+  color: white; /* White text for contrast */
   text-decoration: none;
   padding: 8px 16px;
   transition: background-color 0.3s;
 }
 
 .nav-list li a:hover {
-  background-color: #555;
+  background-color: #1f514e; /* Slightly darker teal on hover */
 }
+
+
 
 /* Styles for Home page sections */
 .home-container {
