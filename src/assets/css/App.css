@@ -146,6 +146,78 @@
 }
 
 
+/* Hero Banner */
+.hero-banner {
+  display: flex; /* Flexbox for two-column layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between text and logo */
+  background-color: #2a635f; /* Match the teal/green color from the logo */
+  color: white;
+  height: 65vh; /* Adjusted height for more space */
+  padding: 0 5%; /* Add horizontal padding */
+  border-radius: 20px; /* Rounded border for the entire banner */
+  overflow: hidden; /* Ensure content doesn't overflow the rounded edges */
+}
+
+.hero-text {
+  flex: 1; /* Take up 50% of the space */
+  max-width: 600px; /* Limit the width of the text */
+}
+
+.hero-text h1 {
+  font-size: 5rem; /* Larger headline font */
+  line-height: 1.2; /* Adjust spacing between lines */
+  margin-bottom: 20px; /* Space below the headline */
+}
+
+.hero-text p {
+  font-size: 1.8rem; /* Larger subheadline font */
+  margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: #ffffff; /* White button */
+  color: #2a635f; /* Teal/green text color */
+  padding: 14px 28px; /* Slightly larger padding for bigger text */
+  text-decoration: none;
+  font-size: 1.3rem; /* Slightly larger button text */
+  font-weight: bold;
+  border-radius: 30px; /* Rounded button */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+.hero-button:hover {
+  background-color: #e8f5f2; /* Light teal on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.hero-logo {
+  flex: 1; /* Take up 50% of the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  width: 350px; /* Increased width for the oval */
+  height: 450px; /* Increased height for the oval */
+  background-color: white; /* White background inside the oval */
+  border-radius: 50%; /* Make it an oval */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide any overflow from the logo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Hero Banner End */
+
 .spa-container {
   padding: 20px;
   max-width: 1200px;
