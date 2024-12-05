@@ -26,12 +26,14 @@ const App = () => {
 
       {/* Main Nav Bar */}
       <nav className="navbar">
+      <div className="nav-container">
         <ul className="nav-list">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/spa">Spas</Link></li>
           <li><Link to="/swimspas">Swim Spas</Link></li>
           <li><Link to="/gazebo">Gazebos</Link></li> {/* Add Gazebo to the nav */}
         </ul>
+      </div>
       </nav>
 
       <Routes>

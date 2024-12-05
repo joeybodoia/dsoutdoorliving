@@ -608,7 +608,7 @@ ul {
   .nav-list {
     display: flex; /* Horizontal layout */
     flex-wrap: nowrap; /* Prevent wrapping */
-    gap: 10px; /* Add spacing between items */
+    gap: 5px; /* Add spacing between items */
     list-style: none; /* Remove bullets */
     margin: 0;
     padding: 0;
@@ -619,9 +619,11 @@ ul {
     font-size: 1rem; /* Adjust font size */
   }
 
-  .nav-list li a {
+    .nav-list li a {
+    white-space: nowrap; /* Prevent "Swim Spas" from splitting */
     text-decoration: none; /* Remove underline */
     color: white; /* White text */
+    font-size: 0.9rem; /* Adjust font size */
   }
 
   .nav-list li a:hover {
@@ -681,6 +683,33 @@ ul {
 
 /* Extra Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
+  .navbar {
+    display: flex;
+    width: 100%; /* Ensure navbar spans the full width */
+    padding-top: 10px; /* Add slight horizontal padding */
+  }
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    margin-left:20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0px; /* Reduce the gap between buttons */
+}
+
+  .nav-list li a {
+    white-space: nowrap; /* Prevent "Swim Spas" from splitting */
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
   /* Hero Text Adjustments */
   .hero-text h1 {
     font-size: 3rem; /* Reduce headline size */
@@ -708,33 +737,31 @@ ul {
 
 
 @media (max-width: 390px) {
-  .navbar {
-    width: 100%; /* Full width */
+   .navbar {
     display: flex;
-    justify-content: center; /* Center-align items */
-    align-items: center;
-    background-color: #2a635f; /* Teal background */
-    padding: 10px 0; /* Adjust padding */
-    box-sizing: border-box; /* Include padding in width */
-    overflow: hidden; /* Prevent content overflow */
+    width: 100%; /* Ensure navbar spans the full width */
+    padding-top: 10px; /* Add slight horizontal padding */
   }
 
-  .nav-list {
-    display: flex; /* Horizontal layout */
-    flex-wrap: nowrap; /* Prevent items from wrapping */
-    gap: 10px; /* Spacing between items */
-    list-style: none; /* Remove bullets */
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Full width */
-    justify-content: space-around; /* Evenly space items */
-  }
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    margin-left:20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0px; /* Reduce the gap between buttons */
+}
 
   .nav-list li a {
     white-space: nowrap; /* Prevent "Swim Spas" from splitting */
     text-decoration: none; /* Remove underline */
     color: white; /* White text */
-    font-size: 1rem; /* Adjust font size */
+    font-size: 0.9rem; /* Adjust font size */
   }
 }
 
