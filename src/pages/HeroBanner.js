@@ -7,7 +7,7 @@ const HeroBanner = () => {
       {/* Left Side: Text Content */}
       <div className="hero-text">
         <h1>Welcome to D's Outdoor Living</h1>
-        <p>Your destination for premium outdoor products</p>
+        <p>Drive a little, save alot</p>
         <a href="#our-story" className="hero-button">Start Exploring</a>
       </div>
 
