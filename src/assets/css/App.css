@@ -583,21 +583,43 @@ ul {
   }
 
   /* Navbars */
-  .top-navbar, .navbar {
+  .top-navbar{
     flex-direction: column; /* Stack navbar items */
     align-items: center;
     padding: 10px 0; /* Reduce padding */
   }
 
-  .nav-list {
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: center;
-    gap: 10px; /* Add space between items */
-  }
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the navigation bar */
+  background-color: #2a635f; /* Teal background */
+  padding: 10px;
+}
 
-  .nav-list li {
-    margin: 0; /* Remove right margin */
-  }
+.nav-list {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  gap: 10px; /* Add spacing between items */
+  list-style: none; /* Remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 5px 10px; /* Adjust padding for smaller screens */
+  font-size: 1rem; /* Adjust font size */
+}
+
+.nav-list li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text */
+}
+
+.nav-list li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
 
   /* Product Containers */
   .spa-list {
@@ -634,6 +656,17 @@ ul {
     width: 100%; /* Full width for smaller screens */
     max-width: 400px; /* Optional: limit max width */
   }
+
+  .box-links {
+    flex-direction: column; /* Stack containers vertically */
+    align-items: center; /* Center-align the stacked items */
+    gap: 15px; /* Adjust spacing */
+  }
+
+  .box-link {
+    max-width: 100%; /* Full width on mobile */
+    height: 150px; /* Adjust height for mobile */
+  }
 }
 
 /* Extra Small Screens (max-width: 480px) */
@@ -659,5 +692,47 @@ ul {
   .spa-item {
     padding: 10px; /* Reduce padding */
   }
+ 
+   .box-links {
+    flex-direction: column; /* Stack containers vertically */
+    align-items: center; /* Center-align the stacked items */
+    gap: 15px; /* Adjust spacing */
+  }
+
+  .box-link {
+    max-width: 100%; /* Full width on mobile */
+    height: 150px; /* Adjust height for mobile */
+  }
+
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the navigation bar */
+  background-color: #2a635f; /* Teal background */
+  padding: 10px;
+}
+
+.nav-list {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  gap: 10px; /* Add spacing between items */
+  list-style: none; /* Remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 5px 10px; /* Adjust padding for smaller screens */
+  font-size: 1rem; /* Adjust font size */
+}
+
+.nav-list li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text */
+}
+
+.nav-list li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
 }
 
