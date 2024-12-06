@@ -426,211 +426,284 @@ ul {
 
 
 
-/* Outer Container */
-.product-container-wrapper {
-  background-color: #2a635f; /* Teal/green */
+/* Outer teal container */
+.teal-container {
+  background-color: #2a635f; /* Teal background */
+  width: 100%;
   padding: 20px;
-  border-radius: 15px;
-  max-width: 90%; /* Increased width */
+  border-radius: 15px; /* Rounded corners */
   margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-/* Inner Gray Containers */
-.product-container {
+/* Container for image and description */
+.image-description-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: #f5f5f5; /* Light gray background */
-  border-radius: 10px;
-  padding: 20px;
-  box-sizing: border-box;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between image and description */
+  justify-content: center;
 }
 
-/* Image Section */
+/* Image container */
 .image-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 50%;
 }
 
+/* Main carousel image */
+/* Image Carousel Container */
 .image-carousel-container {
-  background-color: #fff; /* White for the carousel itself */
-  border-radius: 10px;
   width: 100%;
-  max-width: 300px; /* Ensure consistent width */
-  height: 300px; /* Ensure consistent height */
-  overflow: hidden;
+  max-width: 300px; /* Adjust to desired size */
+  height: 300px; /* Fixed height for images */
+  margin: 0 auto;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Main Carousel Image */
 .carousel-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure consistent sizing */
+  height: 100%; /* Fill the container height */
+  object-fit: cover; /* Ensures consistent cropping */
+  border-radius: 10px; /* Optional: Match the container's rounded corners */
 }
 
-.additional-images {
+
+/* Thumbnail carousel */
+.thumbnail-carousel {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  align-items: center;
   margin-top: 10px;
+  gap: 10px;
 }
 
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Thumbnail Images */
 .thumbnail {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+  width: 60px;
+  height: 60px;
   border-radius: 5px;
+  object-fit: cover; /* Ensures thumbnails have consistent cropping */
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
+  transition: transform 0.3s, border 0.3s;
 }
 
-.thumbnail.active {
-  border-color: #007bff; /* Highlight active thumbnail */
+.thumbnail:hover {
+  transform: scale(1.1);
 }
 
-/* Details Section */
-.details-container {
+.active-thumbnail {
+  border: 2px solid #2a635f; /* Highlight active thumbnail */
+}
+/* Thumbnail carousel navigation */
+.carousel-nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-nav:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Left navigation */
+.left-nav {
+  order: -1; /* Place it before thumbnails */
+}
+
+/* Right navigation */
+.right-nav {
+  order: 2; /* Place it after thumbnails */
+}
+
+/* Description container */
+.description-container {
   flex: 1;
+  background-color: #f4f4f4; /* Light gray background */
   padding: 20px;
-  background-color: #f5f5f5; /* Light gray background */
-  border-radius: 10px;
-  max-width: 50%;
+  border-radius: 10px; /* Rounded corners */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%; /* Match the height of the image container */
 }
 
-.product-title {
+.description-container h1 {
   font-size: 2rem;
+  color: #2a635f; /* Teal text color */
   margin-bottom: 10px;
-  color: #333;
+  text-align: left;
 }
 
 .title-divider {
-  width: 100%;
+  width: 50%;
   height: 2px;
-  background-color: #007bff;
-  margin: 10px 0;
+  background-color: #2EE6D6; /* Teal accent color */
+  margin: 0 auto 10px 0; /* Center below title */
 }
 
-.product-description {
+.description-text {
   font-size: 1.2rem;
+  color: #333; /* Darker text for readability */
   margin-bottom: 20px;
-  color: #666;
+  text-align: left;
+  line-height: 1.6;
 }
 
-.product-info {
+.description-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
-  font-size: 1rem;
-  color: #333;
 }
 
-.product-info p {
+.description-icons li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  font-size: 1.1rem;
+  color: #333; /* Icon text color */
 }
 
-.product-info i {
-  font-size: 1.2rem;
-  color: #007bff;
+.description-icons i {
+  color: #2EE6D6; /* Teal icon color */
+  font-size: 1.5rem;
 }
 
-
-/* Product Features */
+/* Features container */
 .features-container {
+  margin: 20px auto;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .feature-item {
-  flex: 1 1 calc(33.33% - 20px); /* Three items per row */
-  max-width: calc(33.33% - 20px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 1px solid #ccc;
+  background-color: #f4f4f4; /* Light gray */
   border-radius: 10px;
   padding: 15px;
+  text-align: center;
+  width: 300px; /* Fixed size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add depth */
 }
 
 .feature-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-/* Specifications Section */
+.feature-item h4 {
+  font-size: 1.2rem;
+  color: #2a635f;
+  margin-top: 10px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Specifications container */
 .specifications-container {
-  margin: 20px 0;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .specification-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #2a635f;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
 }
 
-.specification-button:hover {
-  background-color: #0056b3;
-}
-
 .specification-details {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: #f4f4f4;
   padding: 10px;
-  margin-top: 10px;
+  border-radius: 5px;
 }
 
-/* Accessories Section */
+.specification-details p {
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Accessories container */
+/* Accessories Container */
 .accessories-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 20px;
+  flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+  justify-content: space-around; /* Evenly space items */
+  gap: 0.2vw; /* Space between containers */
+  margin: 20px 0; /* Space above and below the accessories section */
 }
 
+/* Individual Accessory Item */
 .accessory-item {
-  flex: 1 1 calc(25% - 20px); /* Four items per row */
-  max-width: calc(25% - 20px);
+  flex: 1 1 calc(25% - 0.2vw); /* Adjust width to fit 4 items per row, considering the gap */
+  max-width: 23%; /* Ensure they don't grow too large */
+  background-color: #2a635f; /* Teal/green background */
+  color: white; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  overflow: hidden; /* Prevent content overflow */
+  padding: 15px; /* Inner spacing */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Ensure spacing between image and description */
+  text-align: center; /* Center text alignment */
 }
 
-.accessory-content img {
+/* Accessory Title */
+.accessory-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase; /* Make the title uppercase */
+}
+
+/* Accessory Image */
+.accessory-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px; /* Optional: Rounded corners for the image */
   margin-bottom: 10px;
 }
 
+/* Accessory Description */
+.accessory-item p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .product-container {

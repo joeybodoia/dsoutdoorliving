@@ -8,6 +8,7 @@ const SpaDetail = () => {
   const [spa, setSpa] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // State for current image index
   const [specificationsVisible, setSpecificationsVisible] = useState({}); // State for specifications visibility
+  const [accessoriesVisible, setAccessoriesVisible] = useState({}); // State for accessories visibility
 
   useEffect(() => {
     // Fetch the specific spa product data using the product name
@@ -54,62 +55,80 @@ const SpaDetail = () => {
 
   return (
     <div className="spa-detail">
-      {/* Main Wrapper */}
-      <div className="product-container-wrapper">
-        <div className="product-container">
-          {/* Image Section */}
+      <div className="teal-container">
+        <div className="image-description-container">
+          {/* Image Carousel */}
           <div className="image-container">
             <div className="image-carousel-container">
               <div className="image-carousel">
-                <button onClick={handlePrevImage}>&lt;</button>
                 <img
                   src={Object.values(spa.IMAGE_URLS)[currentImageIndex]}
                   alt={`Spa ${spa.PRODUCT_NAME}`}
                   className="carousel-image"
                 />
-                <button onClick={handleNextImage}>&gt;</button>
               </div>
             </div>
-            <div className="additional-images">
-              {Object.values(spa.IMAGE_URLS).map((img, idx) => (
-                <img
-                  key={idx}
-                  src={img}
-                  alt={`Thumbnail ${idx}`}
-                  className={`thumbnail ${
-                    idx === currentImageIndex ? "active" : ""
-                  }`}
-                  onClick={() => setCurrentImageIndex(idx)}
-                />
-              ))}
+            <div className="thumbnail-carousel">
+              <button
+                onClick={handlePrevImage}
+                className="carousel-nav left-nav"
+              >
+                &lt;
+              </button>
+              <div className="thumbnails">
+                {Object.values(spa.IMAGE_URLS).map((imageUrl, index) => (
+                  <img
+                    key={index}
+                    src={imageUrl}
+                    alt={`Thumbnail ${index + 1}`}
+                    className={`thumbnail ${
+                      currentImageIndex === index
+                        ? "active-thumbnail"
+                        : ""
+                    }`}
+                    onClick={() => setCurrentImageIndex(index)}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={handleNextImage}
+                className="carousel-nav right-nav"
+              >
+                &gt;
+              </button>
             </div>
           </div>
 
-          {/* Description Section */}
-          <div className="details-container">
-            <h1 className="product-title">{spa.PRODUCT_NAME}</h1>
-            <div className="title-divider"></div>
-            <p className="product-description">
+          {/* Description */}
+          <div className="description-container">
+            <h1>{spa.PRODUCT_NAME}</h1>
+            <hr className="title-divider" />
+            <p className="description-text">
               {spa.PRODUCT_DESCRIPTION.Description}
             </p>
-            <div className="product-info">
-              <p>
+            <ul className="description-icons">
+              <li>
                 <i className="fas fa-users"></i>{" "}
-                {spa.PRODUCT_DESCRIPTION['Number of Seats']} People
-              </p>
-              <p>
-                <i className="fas fa-weight"></i>{" "}
+                {spa.PRODUCT_DESCRIPTION["Number of People"]} People
+              </li>
+              <li>
+                <i className="fas fa-chair"></i>{" "}
+                {spa.PRODUCT_DESCRIPTION["Number of Seats"]} Seats
+              </li>
+              <li>
+                <i className="fas fa-weight-hanging"></i>{" "}
                 {spa.PRODUCT_DESCRIPTION.Weight} lbs
-              </p>
-              <p>
+              </li>
+              <li>
                 <i className="fas fa-ruler-combined"></i>{" "}
-                {`${spa.PRODUCT_DESCRIPTION.Length} x ${spa.PRODUCT_DESCRIPTION.Width} x ${spa.PRODUCT_DESCRIPTION.Height} inch`}
-              </p>
-              <p>
-                <i className="fas fa-tint"></i>{" "}
+                {`${spa.PRODUCT_DESCRIPTION.Length} x ${spa.PRODUCT_DESCRIPTION.Width} x ${spa.PRODUCT_DESCRIPTION.Height}`}{" "}
+                inches
+              </li>
+              <li>
+                <i className="fas fa-water"></i>{" "}
                 {spa.PRODUCT_DESCRIPTION.Gallons} Gallons
-              </p>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
