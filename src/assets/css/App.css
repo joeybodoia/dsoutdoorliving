@@ -193,11 +193,11 @@ body {
 
 .hero-text {
   flex: 1; /* Take up 50% of the space */
-  max-width: 600px; /* Limit the width of the text */
+  max-width: 50vw; /* Limit the width of the text */
 }
 
 .hero-text h1 {
-  font-size: 5vw; /* Larger headline font */
+  font-size: 4vw; /* Larger headline font */
   line-height: 1.2; /* Adjust spacing between lines */
   margin-bottom: 20px; /* Space below the headline */
 }
@@ -235,8 +235,8 @@ body {
 }
 
 .logo-container {
-  width: 350px; /* Increased width for the oval */
-  height: 350px; /* Increased height for the oval */
+  width: 20vw; /* Increased width for the oval */
+  height: 20vw; /* Increased height for the oval */
   background-color: white; /* White background inside the oval */
   border-radius: 50%; /* Make it an oval */
   display: flex;
@@ -649,7 +649,7 @@ ul {
 
   .logo-container {
     width: 250px; /* Reduce logo size */
-    height: 300px;
+    height: 250px;
     margin-top: 20px; /* Add space between text and logo */
   }
 
@@ -815,7 +815,7 @@ ul {
 
   .logo-container {
     width: 200px; /* Further reduce logo size */
-    height: 250px; /* Adjust height */
+    height: 200px; /* Adjust height */
   }
 
   /* Product Containers */
