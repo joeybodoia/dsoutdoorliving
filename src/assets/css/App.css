@@ -178,6 +178,8 @@ body {
 
 
 /* Hero Banner */
+
+/* Main Hero Banner */
 .hero-banner {
   display: flex; /* Flexbox for two-column layout */
   align-items: center; /* Center items vertically */
@@ -235,7 +237,7 @@ body {
 
 .logo-container {
   width: 350px; /* Increased width for the oval */
-  height: 450px; /* Increased height for the oval */
+  height: 350px; /* Increased height for the oval */
   background-color: white; /* White background inside the oval */
   border-radius: 50%; /* Make it an oval */
   display: flex;
@@ -249,7 +251,20 @@ body {
   max-width: 100%;
   height: auto; /* Maintain aspect ratio */
 }
+/* Right Side: Ad Image */
+.hero-ad {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.ad-image {
+  width: 90%;
+  height: auto;
+  border-radius: 15px; /* Optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
 /* Hero Banner End */
 
 .spa-container {
