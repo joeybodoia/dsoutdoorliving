@@ -177,7 +177,6 @@ body {
 }
 
 
-/* Hero Banner */
 
 /* Main Hero Banner */
 .hero-banner {
@@ -198,13 +197,13 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 5rem; /* Larger headline font */
+  font-size: 5vw; /* Larger headline font */
   line-height: 1.2; /* Adjust spacing between lines */
   margin-bottom: 20px; /* Space below the headline */
 }
 
 .hero-text p {
-  font-size: 2rem; /* Larger font */
+  font-size: 2vw; /* Larger font */
   margin-bottom: 30px;
   color: #2EE6D6; /* Teal color */
   font-weight: bold; /* Bold text */
@@ -425,51 +424,92 @@ ul {
   margin-bottom: 20px; /* Space below the description section */
 }
 
+
+
 .image-container {
-  flex: 1; /* Take up equal space */
-  margin-right: 20px; /* Space between image and description */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* Cover only half of the screen width */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent content overflow */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.image-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Adjust width to fit within the container */
+  max-width: 300px; /* Reduce maximum width */
+  overflow: hidden; /* Ensure no overflow */
 }
 
 .image-carousel {
   display: flex;
-  align-items: center; /* Center the buttons and image */
-}
-
-.image-carousel-container {
-  border: 1px solid #ccc; /* Same border as feature items */
-  border-radius: 8px; /* Optional: rounded corners */
-  padding: 10px; /* Padding inside the carousel container */
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center align items vertically */
-  justify-content: center; /* Center align items horizontally */
+  align-items: center;
+  position: relative;
+  width: 100%; /* Allow it to stretch to fit the container */
 }
 
 .carousel-image {
-  width: 600px; /* Adjust width for larger images */
-  height: 600px; /* Adjust height for larger images */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
-  border-radius: 4px; /* Optional: rounded corners for carousel images */
+  max-width: 100%; /* Scale the image to fit within the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 .image-carousel button {
-  background-color: #007bff; /* Blue background for arrows */
-  border: none; /* Remove default border */
-  color: white; /* White text */
-  font-size: 12px; /* Font size for the arrow */
-  padding: 4px; /* Padding for the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 4px; /* Optional: rounded corners for buttons */
-  transition: background-color 0.3s; /* Smooth background transition */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px; /* Smaller button size */
+  height: 25px; /* Smaller button size */
+  cursor: pointer;
+  z-index: 10;
 }
 
 .image-carousel button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-carousel button:first-of-type {
+  left: 5px; /* Adjust the position of the "previous" button */
+}
+
+.image-carousel button:last-of-type {
+  right: 5px; /* Adjust the position of the "next" button */
 }
 
 
-
 .description-container {
-  flex: 2; /* Take up more space */
+  display: inline;
+  text-align: center;
+  font-size: 1.2rem; /* Adjust font size */
+  line-height: 1.5; /* Space between lines */
+}
+
+.description-container h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description-container p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.description-item {
+  font-weight: bold; /* Bold titles */
+  display: inline-block; /* Prevent wrapping */
+}
+
+.description-text {
+  font-weight: normal; /* Normal font for values */
+  margin-left: 5px;
 }
 
 .features-container {
@@ -598,6 +638,15 @@ ul {
     text-align: center; /* Center-align text */
   }
 
+    /* Hero Text Adjustments */
+  .hero-text h1 {
+    font-size: 3rem; /* Reduce headline size */
+  }
+
+  .hero-text p {
+    font-size: 1.5rem; /* Reduce subheadline size */
+  }
+
   .logo-container {
     width: 250px; /* Reduce logo size */
     height: 300px;
@@ -693,6 +742,30 @@ ul {
   .accessory-item {
     width: 100%; /* Full width for smaller screens */
     max-width: 400px; /* Optional: limit max width */
+  }
+
+
+ .image-container {
+    margin-right: 0; /* Remove right margin for mobile screens */
+    padding: 10px; /* Add padding around the container */
+  }
+
+  .image-carousel-container {
+    width: 100%; /* Scale to full width of the screen */
+    padding: 5px; /* Adjust padding for mobile screens */
+    border-radius: 6px; /* Slightly smaller corners */
+  }
+
+  .carousel-image {
+    width: 100%; /* Scale image to full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Maintain rounded corners */
+  }
+
+  .image-carousel button {
+    width: 30px; /* Adjust button size for smaller screens */
+    height: 30px;
+    font-size: 10px; /* Slightly smaller font size */
   }
 }
 

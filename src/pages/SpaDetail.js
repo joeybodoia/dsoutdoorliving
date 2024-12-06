@@ -12,7 +12,8 @@ const SpaDetail = () => {
 
   useEffect(() => {
     // Fetch the specific spa product data using the product name
-    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/spas/${productName}`)
+    axios
+      .get(`${process.env.REACT_APP_API_BASE_URL}/api/spas/${productName}`)
       .then((response) => {
         setSpa(response.data);
       })
@@ -24,11 +25,17 @@ const SpaDetail = () => {
   if (!spa) return <div>Loading...</div>; // Loading state
 
   const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % Object.keys(spa.IMAGE_URLS).length);
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex + 1) % Object.keys(spa.IMAGE_URLS).length
+    );
   };
 
   const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + Object.keys(spa.IMAGE_URLS).length) % Object.keys(spa.IMAGE_URLS).length);
+    setCurrentImageIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + Object.keys(spa.IMAGE_URLS).length) %
+        Object.keys(spa.IMAGE_URLS).length
+    );
   };
 
   const toggleSpecification = (specName) => {
@@ -39,39 +46,51 @@ const SpaDetail = () => {
   };
 
   const specificationTitles = [
-    "General Specifications",
-    "Jets Specifications",
-    "Standard Pumps Configuration",
-    "Control System Selection",
-    "Filtration and Purification"
+    'General Specifications',
+    'Jets Specifications',
+    'Standard Pumps Configuration',
+    'Control System Selection',
+    'Filtration and Purification',
   ];
 
   return (
     <div className="spa-detail">
-      <div className="spa-description-container">
-        <div className="image-container">
-          <div className="image-carousel-container">
-            <div className="image-carousel">
-              <button onClick={handlePrevImage}>&lt;</button>
-              <img 
-                src={Object.values(spa.IMAGE_URLS)[currentImageIndex]} 
-                alt={`Spa ${spa.PRODUCT_NAME}`} 
-                className="carousel-image"
-              />
-              <button onClick={handleNextImage}>&gt;</button>
-            </div>
-          </div>
-        </div>
-        <div className="description-container">
-          <h1>{spa.PRODUCT_NAME}</h1>
-          <h3>Description</h3>
-          <p>{spa.PRODUCT_DESCRIPTION.Description}</p>
-          <p>Seats: {spa.PRODUCT_DESCRIPTION['Number of Seats']}</p>
-          <p>Gallons: {spa.PRODUCT_DESCRIPTION.Gallons}</p>
-          <p>Weight: {spa.PRODUCT_DESCRIPTION.Weight} lbs</p>
-        </div>
-      </div>
+      {/* Image Carousel */}
 
+      <div className="image-container">
+  <div className="image-carousel-container">
+    <div className="image-carousel">
+      <button onClick={handlePrevImage}>&lt;</button>
+      <img
+        src={Object.values(spa.IMAGE_URLS)[currentImageIndex]}
+        alt={`Spa ${spa.PRODUCT_NAME}`}
+        className="carousel-image"
+      />
+      <button onClick={handleNextImage}>&gt;</button>
+    </div>
+  </div>
+</div>
+      {/* Description */}
+      <div className="description-container">
+  <h1>{spa.PRODUCT_NAME}</h1>
+  <p>
+    <span className="description-item">Description:</span>
+    <span className="description-text">{spa.PRODUCT_DESCRIPTION.Description}</span>
+  </p>
+  <p>
+    <span className="description-item">Seats:</span>
+    <span className="description-text">{spa.PRODUCT_DESCRIPTION['Number of Seats']}</span>
+  </p>
+  <p>
+    <span className="description-item">Gallons:</span>
+    <span className="description-text">{spa.PRODUCT_DESCRIPTION.Gallons}</span>
+  </p>
+  <p>
+    <span className="description-item">Weight:</span>
+    <span className="description-text">{spa.PRODUCT_DESCRIPTION.Weight} lbs</span>
+  </p>
+</div>
+           {/* Product Features */}
       <h2 style={{ textAlign: 'center' }}>Product Features</h2>
       <div className="features-container">
         {spa.PRODUCT_FEATURES.map((feature, index) => (
@@ -83,16 +102,22 @@ const SpaDetail = () => {
         ))}
       </div>
 
+      {/* Product Specifications */}
       <h2 style={{ textAlign: 'center' }}>Product Specifications</h2>
       <div className="specifications-container">
         {specificationTitles.map((title, index) => (
           <div key={index}>
-            <button onClick={() => toggleSpecification(title)} className="specification-button">
+            <button
+              onClick={() => toggleSpecification(title)}
+              className="specification-button"
+            >
               {title} {specificationsVisible[title] ? '-' : '+'}
             </button>
             {specificationsVisible[title] && (
               <div className="specification-details">
-                {Object.entries(spa.PRODUCT_SPECIFICATIONS[index][title]).map(([key, value], idx) => (
+                {Object.entries(
+                  spa.PRODUCT_SPECIFICATIONS[index][title]
+                ).map(([key, value], idx) => (
                   <p key={idx}>{`${key}: ${value}`}</p>
                 ))}
               </div>
@@ -101,13 +126,18 @@ const SpaDetail = () => {
         ))}
       </div>
 
-      <h2 style={{ textAlign: 'center' }}>Accessories</h2> {/* Centered header for accessories */}
+      {/* Accessories */}
+      <h2 style={{ textAlign: 'center' }}>Accessories</h2>
       <div className="accessories-container">
         {spa.PRODUCT_ACCESSORIES.map((accessory, index) => (
           <div key={index} className="accessory-item">
             <div className="accessory-content">
               <h4>{accessory.title}</h4>
-              <img src={accessory.image_url} alt={`Accessory ${accessory.title}`} className="accessory-image" />
+              <img
+                src={accessory.image_url}
+                alt={`Accessory ${accessory.title}`}
+                className="accessory-image"
+              />
               <p className="accessory-description">{accessory.description}</p>
             </div>
           </div>
