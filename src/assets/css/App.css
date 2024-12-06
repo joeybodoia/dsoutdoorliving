@@ -436,6 +436,16 @@ ul {
   padding: 10px; /* Add padding for spacing */
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* Cover only half of the screen width */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent content overflow */
+  padding: 10px; /* Add padding for spacing */
+}
+
 .image-carousel-container {
   display: flex;
   justify-content: center;
@@ -512,6 +522,21 @@ ul {
   margin-left: 5px;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .image-carousel-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .description-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .description-container p {
+    font-size: 0.9rem;
+  }
+}
 .features-container {
   display: flex; /* Use flexbox for feature items */
   flex-wrap: wrap; /* Allow wrapping if necessary */

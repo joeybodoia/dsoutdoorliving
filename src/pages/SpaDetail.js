@@ -148,4 +148,3 @@ const SpaDetail = () => {
 };
 
 export default SpaDetail;
-
