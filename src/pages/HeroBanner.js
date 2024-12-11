@@ -1,6 +1,9 @@
 import React from 'react';
 import heroImage from '../assets/images/hero-banner.jpg'; // Current Hero Banner Image
 import adImage2 from '../assets/images/ad_image2.jpg'; // Second Ad Image
+import adImage3 from '../assets/images/ad_image3.jpg';
+
+
 
 const HeroBanner = () => {
   return (
@@ -21,7 +24,7 @@ const HeroBanner = () => {
 
       {/* Right Side: Ad Image */}
       <div className="hero-ad">
-        <img src={adImage2} alt="Ad" className="ad-image" />
+        <img src={adImage3} alt="Ad" className="ad-image" />
       </div>
     </div>
   );
