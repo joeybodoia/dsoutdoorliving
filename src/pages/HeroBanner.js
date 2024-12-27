@@ -10,10 +10,12 @@ const HeroBanner = () => {
             <div className="hero-text">
                 <h1>Welcome to D's Outdoor Living</h1>
                 <p>Drive a little, save a lot</p>
-                <button className="hero-button">Start Exploring</button>
+                <a href="#our-story" className="hero-button">Start Exploring</a>
             </div>
             <div className="hero-logo">
+                <div className="logo-container">
                 <img src={heroImage} alt="D's Outdoor Living Logo" className="logo-image" />
+                </div>
             </div>
         </div>
     );
