@@ -23,10 +23,13 @@ const HeroBanner = () => {
       </div>
 
       {/* Right Side: Ad Image */}
+      /*
       <div className="hero-ad">
         <img src={adImage3} alt="Ad" className="ad-image" />
       </div>
+      */
     </div>
+   
   );
 };
 
