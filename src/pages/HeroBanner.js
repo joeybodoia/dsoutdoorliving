@@ -13,7 +13,7 @@ const HeroBanner = () => {
                 <button className="hero-button">Start Exploring</button>
             </div>
             <div className="hero-logo">
-                <img src="/path/to/logo.png" alt="D's Outdoor Living Logo" />
+                <img src={heroImage} alt="D's Outdoor Living Logo" className="logo-image" />
             </div>
         </div>
     );
