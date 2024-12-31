@@ -16,7 +16,7 @@ const App = () => {
       {/* Top Nav Bar */}
       <nav className="top-navbar">
         <div className="top-navbar-left">
-          Call to schedule a private appointment to view our showroom @ (480) 716-4277
+          Call to schedule a private appointment to view our showroom @ (480) 997-9781
         </div>
         <div className="top-navbar-right">
           <a href="#our-story">Our Story</a>
