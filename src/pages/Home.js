@@ -52,7 +52,7 @@ const Home = () => {
       {/* Contact Us Section */}
         <section id="contact-us" className="contact-us">
             <h2>Contact Us</h2>
-            <p><strong>Phone:</strong> (480) 716-4277</p>
+            <p><strong>Phone:</strong> (480) 997-9781</p>
             <p>
                 <strong>Emails:</strong><br />
                 Sales: CJ@ds-outdoorliving.com<br />
