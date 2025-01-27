@@ -31,6 +31,7 @@ body {
 
 .top-navbar-left {
   flex: 1;
+  margin-left: 5px;
 }
 
 .top-navbar-right a {
@@ -416,7 +417,7 @@ ul {
 }
 
 .spa-detail {
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .spa-description-container {
@@ -429,10 +430,10 @@ ul {
 /* Outer teal container */
 .teal-container {
   background-color: #2a635f; /* Teal background */
-  width: 100%;
+  width: 90%;
   padding: 20px;
   border-radius: 15px; /* Rounded corners */
-  margin: 20px auto;
+  margin: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
@@ -440,7 +441,7 @@ ul {
 .image-description-container {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  gap: 20px; /* Space between image and description */
+  gap: 10px; /* Space between image and description */
   justify-content: center;
 }
 
@@ -456,7 +457,7 @@ ul {
 /* Image Carousel Container */
 .image-carousel-container {
   width: 100%;
-  max-width: 500px; /* Adjust to desired size */
+  max-width: 550px; /* Adjust to desired size */
   height: 300px; /* Fixed height for images */
   margin: 0 auto;
   border-radius: 10px; /* Rounded corners */
