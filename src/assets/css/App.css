@@ -456,7 +456,7 @@ ul {
 /* Image Carousel Container */
 .image-carousel-container {
   width: 100%;
-  max-width: 300px; /* Adjust to desired size */
+  max-width: 500px; /* Adjust to desired size */
   height: 300px; /* Fixed height for images */
   margin: 0 auto;
   border-radius: 10px; /* Rounded corners */

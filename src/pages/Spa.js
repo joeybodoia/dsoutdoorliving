@@ -39,8 +39,7 @@ const Spa = () => {
               className="spa-image"
             />  
             <h2>{spa.PRODUCT_NAME}</h2>
-            <div className="bottom-container"> 
-              <p className="left-text">
+              <p>
                 <i className="fas fa-users"></i>
                 {spa.PRODUCT_DESCRIPTION["Number of People"]}
               </p>
@@ -48,7 +47,6 @@ const Spa = () => {
                 <i className="fas fa-box"></i>
                 {spa.PRODUCT_SPECIFICATIONS[0]["General Specifications"]["Measurements (inch)"]}
               </p>
-            </div>
           </div>
         ))} 
       </div>
