@@ -56,30 +56,84 @@ const GazeboDetail = () => {
 
   return (
     <div className="spa-detail">
-      <div className="spa-description-container">
-        <div className="image-container">
-          <div className="image-carousel-container">
-            <div className="image-carousel">
-              <button onClick={handlePrevImage}>&lt;</button>
-              <img 
-                src={Object.values(gazebo.IMAGE_URLS)[currentImageIndex]} 
-                alt={`Gazebo ${gazebo.PRODUCT_NAME}`} 
-                className="carousel-image"
-              />  
-              <button onClick={handleNextImage}>&gt;</button>
+      <div className="teal-container">
+        <div className="image-description-container">
+          {/* Image Carousel */}
+          <div className="image-container">
+            <div className="image-carousel-container">
+              <div className="image-carousel">
+                <img
+                  src={Object.values(gazebo.IMAGE_URLS)[currentImageIndex]}
+                  alt={`Spa ${gazebo.PRODUCT_NAME}`}
+                  className="carousel-image"
+                />
+              </div>
+            </div>
+            <div className="thumbnail-carousel">
+              <button
+                onClick={handlePrevImage}
+                className="carousel-nav left-nav"
+              >
+                &lt;
+              </button>
+              <div className="thumbnails">
+                {Object.values(gazebo.IMAGE_URLS).map((imageUrl, index) => (
+                  <img
+                    key={index}
+                    src={imageUrl}
+                    alt={`Thumbnail ${index + 1}`}
+                    className={`thumbnail ${
+                      currentImageIndex === index
+                        ? "active-thumbnail"
+                        : ""
+                    }`}
+                    onClick={() => setCurrentImageIndex(index)}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={handleNextImage}
+                className="carousel-nav right-nav"
+              >
+                &gt;
+              </button>
             </div>
           </div>
-        </div>
-        <div className="description-container">
-          <h1>{gazebo.PRODUCT_NAME}</h1>
-          <h3>Description</h3>
-          <p>{gazebo.PRODUCT_DESCRIPTION.Description}</p>
-          <p>Seats: {gazebo.PRODUCT_DESCRIPTION['Number of Seats']}</p>
-          <p>Gallons: {gazebo.PRODUCT_DESCRIPTION.Gallons}</p>
-          <p>Weight: {gazebo.PRODUCT_DESCRIPTION.Weight} lbs</p>
+
+          {/* Description */}
+          <div className="description-container">
+            <h1>{gazebo.PRODUCT_NAME}</h1>
+            <hr className="title-divider" />
+            <p className="description-text">
+              {gazebo.PRODUCT_DESCRIPTION.Description}
+            </p>
+            <ul className="description-icons">
+              <li>
+                <i className="fas fa-users"></i>{" "}
+                {gazebo.PRODUCT_DESCRIPTION["Number of People"]} People
+              </li>
+              <li>
+                <i className="fas fa-chair"></i>{" "}
+                {gazebo.PRODUCT_DESCRIPTION["Number of Seats"]} Seats
+              </li>
+              <li>
+                <i className="fas fa-weight-hanging"></i>{" "}
+                {gazebo.PRODUCT_DESCRIPTION.Weight} lbs
+              </li>
+              <li>
+                <i className="fas fa-ruler-combined"></i>{" "}
+                {`${gazebo.PRODUCT_DESCRIPTION.Length} x ${gazebo.PRODUCT_DESCRIPTION.Width} x ${gazebo.PRODUCT_DESCRIPTION.Height}`}{" "}
+                inches
+              </li>
+              <li>
+                <i className="fas fa-water"></i>{" "}
+                {gazebo.PRODUCT_DESCRIPTION.Gallons} Gallons
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
+    
       <h2 style={{ textAlign: 'center' }}>Product Features</h2>
       <div className="features-container">
         {gazebo.PRODUCT_FEATURES.map((feature, index) => (
