@@ -59,13 +59,13 @@ const Home = () => {
                 Service: service@ds-outdoorliving.com
             </p>
             <p>
-                <strong>Location 1:</strong> <br />
+                <strong>Location 1 (North Phoenix):</strong> <br />
                 3106 W Blue Eagle Lane Phoenix AZ 85086<br />
                 <strong>Phone:</strong> (480) 997-9781<br />
-                <strong>Location 2:</strong> <br />
+                <strong>Location 2 (Mesa):</strong> <br />
                 3820 East Main Street Suite 5 Mesa AZ 85205<br />
                 <strong>Phone:</strong> (480) 997-9738<br />
-                <strong>Location 3 (Coming Soon):</strong> <br />
+                <strong>Location 3 (Chandler - Coming Soon):</strong> <br />
                 6140 W Chandler Blvd Suite 5,6,7 Chandler AZ 85226<br />
                 <strong>Phone:</strong> (480) 997-9447<br />
             </p>
