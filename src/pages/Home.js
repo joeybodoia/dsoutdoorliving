@@ -58,7 +58,17 @@ const Home = () => {
                 Sales: CJ@ds-outdoorliving.com<br />
                 Service: service@ds-outdoorliving.com
             </p>
-            <p><strong>Address:</strong> 3106 W Blue Eagle Lane Phoenix AZ 85086</p>
+            <p>
+                <strong>Location 1:</strong> <br />
+                3106 W Blue Eagle Lane Phoenix AZ 85086<br />
+                <strong>Phone:</strong> (480) 997-9781<br />
+                <strong>Location 2:</strong> <br />
+                3820 East Main Street Suite 5 Mesa AZ 85205<br />
+                <strong>Phone:</strong> (480) 997-9738<br />
+                <strong>Location 3 (Coming Soon):</strong> <br />
+                6140 W Chandler Blvd Suite 5,6,7 Chandler AZ 85226<br />
+                <strong>Phone:</strong> (480) 997-9447<br />
+            </p>
         </section>
 
     </div>
