@@ -65,9 +65,6 @@ const Home = () => {
                 <strong>Location 2 (Mesa):</strong> <br />
                 3820 East Main Street Suite 5 Mesa AZ 85205<br />
                 <strong>Phone:</strong> (480) 997-9738<br />
-                <strong>Location 3 (Chandler - Coming Soon):</strong> <br />
-                6140 W Chandler Blvd Suite 5,6,7 Chandler AZ 85226<br />
-                <strong>Phone:</strong> (480) 997-9447<br />
             </p>
         </section>
 
