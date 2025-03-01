@@ -63,6 +63,9 @@ const Home = () => {
                 3106 W Blue Eagle Lane Phoenix AZ 85086<br />
                 <strong>Phone:</strong> (480) 997-9781<br />
             </p>
+                <strong>Location 2 (Chandler - Coming Soon):</strong> <br />
+                6140 W Chandler Blvd Suite 5,6,7 Chandler AZ 85226<br />
+                <strong>Phone:</strong> (480) 997-9447<br />
         </section>
 
     </div>
