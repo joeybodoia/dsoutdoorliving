@@ -62,9 +62,6 @@ const Home = () => {
                 <strong>Location 1 (North Phoenix):</strong> <br />
                 3106 W Blue Eagle Lane Phoenix AZ 85086<br />
                 <strong>Phone:</strong> (480) 997-9781<br />
-                <strong>Location 2 (Mesa):</strong> <br />
-                3820 East Main Street Suite 5 Mesa AZ 85205<br />
-                <strong>Phone:</strong> (480) 997-9738<br />
             </p>
         </section>
 
