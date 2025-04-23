@@ -64,9 +64,10 @@ const Home = () => {
                 <strong>Phone:</strong> (480) 997-9781<br />
             </p>
             <p>
-                <strong>Location 2 (Chandler):</strong> <br />
-                6140 W Chandler Blvd Suite 5,6,7 Chandler AZ 85226<br />
-                <strong>Phone:</strong> (480) 997-9447<br />
+                <strong>Location 2 (Tucson) - coming soon</strong>
+            </p>
+            <p>
+                <strong>Location 3 - Suprise Location coming soon</strong>
             </p>
         </section>
 
