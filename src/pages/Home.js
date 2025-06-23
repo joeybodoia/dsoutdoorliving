@@ -65,7 +65,8 @@ const Home = () => {
             </p>
             <p>
                 <strong>Location 2 (Suprise):</strong> <br />
-                11304 North Dysart Road, Suprise Arizona 85379 Suite 104
+                11304 North Dysart Road, Suprise AZ 85379 Suite 104<br />
+                 <strong>Phone:</strong> (480) 571-1692<br />
             </p>
             <p> 
                 <strong>Location 3 (Tucson) - coming soon</strong>
