@@ -64,10 +64,11 @@ const Home = () => {
                 <strong>Phone:</strong> (480) 997-9781<br />
             </p>
             <p>
-                <strong>Location 2 (Tucson) - coming soon</strong>
+                <strong>Location 2 (Suprise) </strong>
+                11304 North Dysart Road, Suprise Arizona 85379 Suite 104
             </p>
-            <p>
-                <strong>Location 3 - Suprise Location coming soon</strong>
+            <p> 
+                <strong>Location 3 (Tucson) - coming soon</strong>
             </p>
         </section>
 
